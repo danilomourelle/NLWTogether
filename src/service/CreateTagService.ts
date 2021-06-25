@@ -1,9 +1,9 @@
 import { getCustomRepository } from "typeorm";
-import { TagRepo } from "../repositories/TagRepo";
+import { TagsRepo } from "../repositories/TagsRepo";
 
 export class CreateTagService {
     async exec(name: string) {
-        const tagsRepo = getCustomRepository(TagRepo);
+        const tagsRepo = getCustomRepository(TagsRepo);
 
         if (!name) {
             throw new Error("Incorrect name!")
